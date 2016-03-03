@@ -1,0 +1,17 @@
+TARGETPATH = ..\lib
+TARGETNAME=Compress
+TARGETTYPE=LIBRARY
+DRIVERTYPE=FS
+INCLUDES=$(BASEDIR)\inc\ddk;
+TARGETLIBS= $(TARGETLIBS) \
+			$(DDK_LIB_PATH)\ntstrsafe.lib\
+			$(DDK_LIB_PATH)\Tdi.lib
+			
+SOURCES=lzo1x_1o.c\
+	lzo1x_d1.c\
+	lzo1x_d2.c
+		
+
+MSC_WARNING_LEVEL=/W2 /WX
+	
+

@@ -1,0 +1,45 @@
+TARGETNAME=root_fw
+TARGETTYPE=DRIVER
+
+# 消息等级
+MSC_WARNING_LEVEL= /W1
+
+# 包含LIB
+TARGETLIBS=$(DDK_LIB_PATH)\tdi.lib \
+			..\Compress\lib\$(MY_LIB_PATH)\Compress.lib
+
+# 包含路径
+#INCLUDES=
+
+# Create browse info
+#BROWSER_INFO=1
+#BROWSERFILE=<some path>
+
+# Additional defines for the C/C++ preprocessor
+C_DEFINES= $(C_DEFINES) -DBG=1
+
+SOURCES= stdafx.c \
+		 Sock.c \
+		 ObjListManager.c \
+		 root_fw.c \
+		 IPv4ProtocolSet.c \
+		 TdiFltDisp.c \
+		 TdiCreate.c \
+		 TdiClose.c \
+		 TdiConnect.c \
+		 TdiAssociateAddress.c \
+		 TdiSend.c \
+		 TdiSetEventHandler.c \
+		 ConnectEventHandler.c \
+		 ReceiveEventHandler.c \
+		 ReceiveDatagramEventHandler.c \
+		 TdiBase.c	\
+		 AppProtocol.c	\
+		 NetBIOS.c	\
+		 smb.c	\
+		 hash_fid.h \
+		 FsCrypt.c \
+		 FsCryptAlg.c \
+		 FsCompress.c \
+		 Http.c
+		 

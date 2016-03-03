@@ -1,0 +1,3 @@
+1>errors in directory g:\kuaipan2\tdi\root_fw_c
+1>g:\kuaipan2\tdi\root_fw_c\smb.c(3) : error C1083: Cannot open include file: 'FsCrypt.h': No such file or directory
+1>link : error LNK1181: cannot open input file 'g:\kuaipan2\tdi\root_fw_c\objchk_wxp_x86\i386\smb.obj'
